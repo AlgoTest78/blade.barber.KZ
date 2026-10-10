@@ -1,0 +1,356 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BLADE BARBERSHOP — мужские стрижки, оформление бороды и королевское бритьё.">
+  <title>BLADE BARBERSHOP — Мужской стиль</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="light light-one"></div>
+  <div class="light light-two"></div>
+
+  <header class="header">
+    <a class="logo" href="#home">
+      BLADE<span>.</span>
+      <small>BARBERSHOP</small>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Открыть меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="nav">
+      <a href="#services">Услуги</a>
+      <a href="#about">О нас</a>
+      <a href="#barbers">Барберы</a>
+      <a href="#gallery">Галерея</a>
+      <a href="#booking" class="nav-book">Записаться ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ГЛАВНЫЙ ЭКРАН -->
+    <section class="hero container" id="home">
+      <div class="hero-content">
+        <div class="eyebrow">
+          <span class="gold-dot"></span>
+          МУЖСКАЯ ПАРИКМАХЕРСКАЯ
+        </div>
+
+        <h1>
+          СТИЛЬ — ЭТО<br>
+          <span class="gold-text">ТВОЙ ХАРАКТЕР.</span>
+        </h1>
+
+        <p class="hero-description">
+          Точная стрижка. Безупречная борода.
+          Атмосфера, в которую хочется возвращаться.
+          Найди свой стиль вместе с BLADE.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#booking" class="button button-gold">
+            Записаться на стрижку <span>↗</span>
+          </a>
+          <a href="#services" class="button button-outline">
+            Наши услуги
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div><strong>5+</strong><span>лет опыта</span></div>
+          <div><strong>20+</strong><span>мастеров</span></div>
+          <div><strong>10 000+</strong><span>довольных клиентов</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-frame">
+          <!-- ЗАМЕНИ НА СВОЮ ФОТОГРАФИЮ -->
+          <img src="https://vosk.in.ua/wp-content/uploads/2023/03/39690b.jpg"
+               alt="Барбер выполняет мужскую стрижку">
+
+          <div class="frame-label">
+            <span>01 / BLADE STYLE</span>
+            <span>EST. 2020</span>
+          </div>
+        </div>
+
+        <div class="hero-badge">
+          <span class="badge-star">✳</span>
+          <div>
+            <strong>ТВОЙ СТИЛЬ</strong>
+            <small>Наша ответственность</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- БЕГУЩАЯ СТРОКА -->
+    <div class="ticker" aria-label="Услуги BLADE">
+      <div class="ticker-track">
+        <span>МУЖСКИЕ СТРИЖКИ ✳</span>
+        <span>ОФОРМЛЕНИЕ БОРОДЫ ✳</span>
+        <span>КОРОЛЕВСКОЕ БРИТЬЁ ✳</span>
+        <span>ТВОЙ СТИЛЬ ✳</span>
+        <span>МУЖСКИЕ СТРИЖКИ ✳</span>
+        <span>ОФОРМЛЕНИЕ БОРОДЫ ✳</span>
+        <span>КОРОЛЕВСКОЕ БРИТЬЁ ✳</span>
+        <span>ТВОЙ СТИЛЬ ✳</span>
+      </div>
+    </div>
+
+    <!-- УСЛУГИ -->
+    <section class="section container" id="services">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">01 / НАШИ УСЛУГИ</span>
+          <h2>ВЫБЕРИ СВОЙ <span class="gold-text">СТИЛЬ.</span></h2>
+        </div>
+        <p>От классики до современных образов — внимание к каждой детали.</p>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="service-number">01</div>
+          <div class="service-icon">✂</div>
+          <h3>Мужская стрижка</h3>
+          <p>Индивидуальный подход и аккуратная форма, подходящая именно тебе.</p>
+          <div class="service-bottom">
+            <strong>от 6 000 ₸</strong>
+            <a href="#booking" class="service-link" data-service="Мужская стрижка">↗</a>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-number">02</div>
+          <div class="service-icon">◈</div>
+          <h3>Стрижка + борода</h3>
+          <p>Цельный образ с гармоничной стрижкой и аккуратно оформленной бородой.</p>
+          <div class="service-bottom">
+            <strong>от 8 000 ₸</strong>
+            <a href="#booking" class="service-link" data-service="Стрижка + борода">↗</a>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-number">03</div>
+          <div class="service-icon">♜</div>
+          <h3>Оформление бороды</h3>
+          <p>Чёткие контуры, ухоженный вид и внимание к форме лица.</p>
+          <div class="service-bottom">
+            <strong>от 4 000 ₸</strong>
+            <a href="#booking" class="service-link" data-service="Оформление бороды">↗</a>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-number">04</div>
+          <div class="service-icon">✦</div>
+          <h3>Королевское бритьё</h3>
+          <p>Классический ритуал с особым вниманием к комфорту и деталям.</p>
+          <div class="service-bottom">
+            <strong>от 5 000 ₸</strong>
+            <a href="#booking" class="service-link" data-service="Королевское бритьё">↗</a>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-number">05</div>
+          <div class="service-icon">〰</div>
+          <h3>Стрижка машинкой</h3>
+          <p>Чистая, лаконичная стрижка с аккуратными переходами.</p>
+          <div class="service-bottom">
+            <strong>от 4 000 ₸</strong>
+            <a href="#booking" class="service-link" data-service="Стрижка машинкой">↗</a>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-number">06</div>
+          <div class="service-icon">✂</div>
+          <h3>Детская стрижка</h3>
+          <p>Комфортная атмосфера и аккуратная стрижка для юных гостей.</p>
+          <div class="service-bottom">
+            <strong>от 4 500 ₸</strong>
+            <a href="#booking" class="service-link" data-service="Детская стрижка">↗</a>
+          </div>
+        </article>
+      </div>
+      <p class="price-note">* Указаны начальные цены. Итоговая стоимость зависит от услуги.</p>
+    </section>
+
+    <!-- О НАС -->
+    <section class="section about-section" id="about">
+      <div class="container about-grid">
+        <div class="about-image">
+          <!-- ЗАМЕНИ НА ФОТО КОМАНДЫ -->
+          <img src="https://www.simushka.ru/upload/medialibrary/9b0/44675483_605595569858192_4975997640435685178_n.jpg"
+               alt="Команда профессиональных барберов BLADE">
+          <div class="image-caption">BLADE / OUR TEAM</div>
+        </div>
+
+        <div class="about-content">
+          <span class="eyebrow">02 / НАША ФИЛОСОФИЯ</span>
+          <h2>НЕ ПРОСТО<br><span class="gold-text">СТРИЖКА.</span><br>МАСТЕРСТВО.</h2>
+
+          <p>
+            В BLADE мы собрали команду барберов, для которых мужской
+            стиль — это не просто работа, а настоящее мастерство.
+          </p>
+
+          <p>
+            Каждый специалист внимательно относится к пожеланиям
+            клиента, учитывает особенности внешности и помогает
+            подобрать стрижку, которая действительно тебе подходит.
+          </p>
+
+          <p>
+            Мы следим за современными тенденциями, ценим качество,
+            аккуратность и индивидуальный подход к каждому гостю.
+          </p>
+
+          <a href="#barbers" class="text-link">ПОЗНАКОМИТЬСЯ С КОМАНДОЙ ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- БАРБЕРЫ -->
+    <section class="section container" id="barbers">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">03 / НАША КОМАНДА</span>
+          <h2>ТВОЙ БАРБЕР. <span class="gold-text">ТВОЙ СТИЛЬ.</span></h2>
+        </div>
+        <p>Профессионалы, которые знают, как подчеркнуть твой характер.</p>
+      </div>
+
+      <div class="barbers-grid">
+        <article class="barber-card">
+          <div class="barber-photo">
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMSEhUSExMVFRUXGBUVFRgWFhUXFRcWFRcXFhcYFxUYHSggGB0lHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGhAQGy0lHSUtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0rLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIARIAuAMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAEAgMFBgcAAQj/xABCEAABAwIEAwUFBgQFAgcAAAABAAIDBBEFEiExBkFREyJhcYEHMpGhsUJSwdHh8BRicvEVIzOCkiTCFzRDU2Oisv/EABoBAAMBAQEBAAAAAAAAAAAAAAECAwQABQb/xAAkEQACAgICAgMAAwEAAAAAAAAAAQIRAyESMUFRBBMiMmFxFP/aAAwDAQACEQMRAD8A2qlnY9ocxwcOoN/BN1FbFGe+9jL/AHiB9V8o4LxVWUjSynqJImk3ytItc76EGyBxTFJah/aTSOkcebyXH57KVSpLQ+jTPbnj1DUGNkBZJMwnNIyxAb90vG+vLkshKW5yQmhHigN2eLl6uTgPLLl6uXHHi9XLlxxy6y4L1cccvCvU5TQlxsuAO0FKXnwVso6fKLJnDqMNClIWKiVCi4o0bBEkwxI6nhRALp4blTdJTJFDTKcpadTbGSEQU6MZCn4oVH41izIGnXVJYyQ3ilcyFpJOq5Z1imIvmdc7cguQsajM7rrpK5OKerxcvFxx6jKLCppjaOMu5XFgATsC4kC+uymeFcLgI7epPdv3IxpmsbEuPIX0tz1Vir3seCIyQwWs1ujLFzA4cr7A3Olx5qcsm6Q6hq2VJvC8+xMTTYuAc/UgC+hAI9F6OFKk+61rj0DwCdts1gdxsrCyzH2JtqQH6gg5tH7+FiDob+IUlT1ZA1FnBxDhoWOPVp+ySTpfTW3Oym8kh1CJm1RTvjcWPY5jhu1wLT8CmlsklPBUx5Jm9q0i7du71LDuw30Ou5GlrrN+J+G30jr6vhcbMfbUH7rxydv4G2ieGXlp9izx8drog16F4uVSQprbmwVkwihAF0FhFDfUqzww2Fk8UBnsUakIIUiCFSUESYU6GJSdHAmYY1LUUKVsKQZRU6mYIrBDUzA0XKiMf4iEYys3UmyiQXj2ONhbYHX5rPMQrXSuLnHyHRIqah0ji5xuUwUllEi1YPwFVVEbZR2bGuF253G5B2Nmg29VyJwD2gy08TYXRNkDRZpzFpsNgdDderlXkVqRgq5W2rwGMR6CxtvzVdnoS0bqzVE07BF6xhJDRuSAPMmwXiluF6bPODyYC7191vzN/RK3SGSthuIwkWazZoDRbw5/ih4Kp7TbXYg9LEWPyVwdhpIJAufzsoSsw23LW/LkpxKSQMMTPO1uXp+wiKTEQDcktuRax2OxNvLlsbBAz0bhyUlhXCFTURukiYHW+zmAcT4XsEWkBNklS4obglvebmcHgEAjc/AbjyU02sbNGWSASNdo9t9hb7XgbnxGnQWz2skmgcY5WvYQdWuFtbWXtHjRa/NsTuef5JHjsdTrsC4gwv8AhpjHqW7sJFja+zv5gdD8eabw6lzFWLEJv4uDKRd8XeY7q3TMD6XP+wJGG0lgrY9rZGap6DaKnsAFL01PdM0cN1ZKGi0VbJgkNOi440a6mXCOyFnUIhjUrC4MFyq1ieOshUTU8Rulb3VLJNRWykIOXRYsa4g+yw6qrSPLjcm5Ua+peN03/HlR5pluFEokkKIfidl7T4nmQbCkXjhng+ata57XNYwG13X1PQAfVch+FON5qMFgY2RhN8rrix6hwXJecfLOcJXozNmKnLYuJ8yg6itLt0IvVrMx11bPZywOneD9wb9RcqprS/ZJS2ZJK333P7PNpdrWNDtOhJf8B4qeWXGLZbBjc5pIt/YgN2UXV0YPL9/mrJVzkuLXgHS19Lm+xsNiCoo0p2P91GE7NWTFxZAzUA3tr+wrVwZJkaWn9/FIp8J0uT5W+qLp6XJexvdCU/B0cb7CMcoYaluWZjXDxGyzDiL2fZCXU77j7ruXkVo08hUZUvdzQjNoeeKLWygYNgNSwSPNg1jHFwJ3A3t6Iqmi2CtsspbDKOrHN/5C34qBoYLkLVhd2zDniotJEvhFHeytNPS6IbBaWwCn+ysLpmySREzRWVS4lxxsQIBRvGHEbYgWg6rKK6tdM4ud6IWGhdbXOmcSdlK4UbNUVSw6KaoI+Sz/ACH+S2DsMjObcJE9GDsixTkLgwrCpejZXsgaijI5J7C6cXUrUt6rygiGbRPLJ+RVDZMYfhoOtlynMNc0NsvF5k87s2rFoyCl4UrJCQIHi2hzDKLjlcqOraCWE5ZY3MO3eBAv4HYr7AiZGRewt6Kpe0P+HFLMJQ3JlO9t7aW8V7D+VONNpO/R5Swp6R8yK/8AslxHK+aC9i5vaR/1NGV1hz0LT/tKoRCmODad8ldTMjJDu1Ybg27re8/b+UOWzIk4tMnim4TTRtVHQhsrs7Rctbl5k9SXc+Wiea9rpS3p9AP7ozmXHQN1Op28lWcLrSahxPUi/iTt5LJFHoZJJstUhDdeQUBiHEj2XEcTH23FyHfRTkr9PBU/iXDsxzRPyu/fT6IxDNOtATuObOtNC6PxAzD1RX+LMlAcxwI8FDYNw3K9+aZ2a217dfJSvEXDhEQbBZjnOGblpzJsqNIkpSS2dX18bojG0jOS02vrYG5XmDwXIUThtEGNb3Gtdazraknn3tyrVhLA3UrRCPGNGHJLnKy2YXT2bcqP4oxlsUZ1QOJcRtiba+qz/EsTdPJ3j6JWckV7E5HzyOc6510XkNHbdWB9OxguU1gU8UlRkdY6aDkpPJpsoobA46fKFNYHCDdH8Q0UbWNc0WvuEFhrso0WfLPnjtFsceMw+qhITL2It8uYIdwN1jVmlkdK03XsT8pU2ykBF1HS0xui5J6OqibwJpcbrk3hs2QWXLzcuNuWjbjkktlNpMZrYmljKmQNN7gm+/QuuQoyeme/V73O595xOvqpARrgxfVqMV0j55tsi/8ADQr37JMCHbyVJGkbCxv9cm58w0Ef70Z7OOFI6x8r5g4xxBtmg5Q97r6EjWwA2FtwtJhgijYBFGyNv3WNDR623Pip5ppKvZXBC5X6KtxTVGOnmLd7fK9iqHh9eW2see/7K0HiGEPY5p2cCD6rInh8TnsOuU/EHYqePaL5dNM1jD6ntowQfNM1zWtBJ3Va4WxUtdkJ0I9ELj/E7+0IiZmDTYuOov4WS8XdFo5FxsuPD4zlx0BB2O/VP8RNOXTe3yJsfqskrcWqXvDme8ObTbbXU3Vkw/H5pYM0wLXC7eeoFtbFUUWic8sWmSOQBB1mJlgSMJrO0dZFYzhoykrR2YCoV2Il56le0dI73yvcMoc0xB6q8y4Plhvbkjx0dy2Z1jM7trqHZNkcCDYg3uDqicekIe4eKiY2FxCRRC2Xf/EXPjGZxPmjcOOir1KbMA8lb8KjGQFZPkVGJpwbkKa0jVEwuuiXxANQ0BAKw3aNdUEdoQLITObqSawJmaIXup2h6GWkrk614C9UXZRUVxtKel09BQOe4Ma0lx5Aa/p5rZ8A4VZFE0PABsLiwJvzuV2P4DEyJ7om5HaFxB95ovdp5W1v6L3+U6bo8hRhaVjPs3oGw0paCC8vJksbi5AsAeYAA163RXEMJj/zG+4ff/lJ5+R+qi8Br2xVDGZhkmBY0bWc0Okbfle2ccr6c1cXtBBBFwRYg7EFcl9sN9hv6cmujPK92Yeiy/imBwOcC5G/iFqnEFAaZ+lzE73T0P3SfoqlXUoLj4qKTi9muVTjooNDiZNxeysNHVNjhNsrrXJ/ZQWJcLk3fCQ031aTofLoVDRYVVuJayJx1toW2vtve3JV/MiFyx9oPosS7QvvG0C1r9BfW309U7VV5dcclovBnsmj7JslVK5z3avjjIDQPu59z4kW/FWqT2ZYYRYQOb4iaa/zcQjT8E3O+zIuFm6q14jFdhUxiHALaQGWCRzowQHNktmFza4cAARqOXxQtbF/llVT0S8lJwBn/UHzWk1sYEB8lnuBt/6k+a0avH+SfJc2cj594gF5n+aHyBouisdb/nvH8yaq4S1uosiKGwOu0K8YO0dkFQaR3dV3wB12WWP5a/Jq+M/0Hum0Q8Zu5LdobLs1iFg6NpIubYIeSUJb33AUfKbJFEZsfdKD5rkNHquRcUgWfQLkJWDM0tIuCCD5FLB66Hx/MJOde8eOYzixNMZW6umhkY6JxJBBY4Pa4j7VxbTxWxYXXNnhjnZ7sjGvHhmF7HxG3os19qlJlkjmA/1GljzyLm6t9bZv+Kf9nePuga6glY4ysc58Q0tkcA4gu1+04nTk7wUYfmbiaMn7gpeTQ8SoWzRujeLg/EHkR4hZfjNC6GTI7cbEbEciFbMUFTPvLkbzYwWB83bn6eCYbTmzWSRseBsXC/z3CpPFyExZeBUZIuQ3tp5qW4TwAthYJGnMe9rpo/VSsuDWlje1oALgC3U2vzBPJXCaWONoL7DkOvoN1OGPjJ2Vy5VKKoFpc0EbjluG678uevzUlFUNfYtNwsz4t4ondUil0igeztIn2Je9zHDR2oAANiQL7jdW7hbEWSRkhwJBs4A7OR5rlxJcHx5Fhc4WsdR4oCtwanlBDmAX5t7p+Se7RJEljZPRMpn/AIb9nMZYZrjfK9ut/wCoafJLxRhbG5pFiLgjxCuzJdvE6eQ5pmso4pXWewPOxve1vG26AT5TxNwFUb7ZkbxIWdk3Kr57W/Zr2INdRhxYNZ4rl2Qf+4y+uXqOW6zXsJJWXDXuHUNJHxAsmFGKXZXHB5rNAVSjiIsrpgdPdoWb5VcTT8fsMkbdOUoBOqIEY2UZIHNfovNX60beiYdEFF1Te8iWPda5Qs7rlLFUxpPQuJll4kZ7Lk9CWby/w/RM5/lv5JTn/FDul1+X6L2keWyve0KjdNSOay2fMy1zYDvC5JsbaX+Kz7CcDqKeoZM90IEZDngPObI7umwtrvt5eC2CsmjbFJJIQGtYXuvsGtFyfksoouJ8O/i3SgXblLy0RuNixjnPIOXTRoNr6kfEOKtNjRm0mkarDDppz1+KRVQgC5IBVFqva1S7R57dSx1/gUC32j0TjeR0zvAR/m5WVkjRWVIyFzdSL200vY2QMULnHM45nHmfw5DyCqb/AGr0IsGxzkDkGsH1egT7VqVu0NQR5Rj/AL1wC08WcMxVkceZzg+F5eDHbPlcLPbrvs02/lTPBWHxROlEBks05ZRIbnOLFhsTdt2vPL6Kn1vtOzWkhgLb/eeL3HOzR+KThPF9Y97qhrWBuaxbHG90kkro3bBp2AjDnX00FtdRGSV2VTdUbBm71vL6LyaSwzdL/JVP2dcRyVbZW1GTtoy0nILNdHI28bgCednfBTGM1IY1gvbNc+g1KolYrJKmqdRzJFh4Abn1KlqdlgqrQueRnyutve2wGyIZiMj/ALWnVBr0EskkrRoSPJeZxyCh6d7RqTc+KOhqm8yAlo6iM4i4Po61v+dCA7lJH3JAf6h73kbhV6T2fsibamlJP3ZS3XycAPorlV1FyANtyVCzT5qmNo3N3ejRqfos+bjLTNOCD/knRBVXAk7W52vY9/NguPg47/JVevoHwutKxzD0cLX8uq0zFJnGWJjdi7veIScSbG5pilAc3YtPLoWk6tI8FlyYorrRoi51vZlcs+llGOm71lMYrQGKV8d7gatP3mnVp+H4qJhh711nSSux27CSxcnXFchYaNqks73T5KMrZrC/x9FKGAHVv5KD4paWwPeL3GW/lmGvovdVHlEZx5NfD5z1glPmchy/MhZrwTRUk9KGyT9jI18rnd4NzE27M36gDQf1K8cf1TY8Mlzc4hG3xfIAwfW/osGgLr6Eg9QbIsBK8QiMVTxEQWd3UWy5soz5bcs10E0JEjO9ZJJK5aF7FgpL3XCbLivcv71XHBdM/uAeJU1w3xLJRudk7zHWzNOxtexB5HUqvUw2Hmp/AOHJ62QRwR3t77zpGwfzO/AXPgkboolZZuBuKC/FgcoYyaLsA0bDs25ma8zdp/5FazV4V2srJHnuMbYN+84m9yegsNOahuEeCKfDwH2EtRbWRw2vuIx9gfM9VKYtXFouXADmpSy0tGjHgt7JCZ7AenIEXQ8lBm1vkd1HunzCptJxk0SCPVxe4NYG63J2UtivGdPBZod2sgID2xWc1mtiHPvluOgupwcu0XyRjXFhFW+SIgOaTfYj3T6p6lqm3Gd2p2Cq1bxI6pcWxvEbN7vcGgkEaAnQfojMMrqSncO0qopJnEANDw/XTQll7bt08QtCy/i2ZZYamooseNVpjFxvbX6/iq7wxihdJPXP/wBP/wAvCN9GEmR3q45f9hUZxJxCXSdkN3uDfu6OPeN+QtfXwTeOYxDBTsggDcrAGRtB0zHr6m5PmsiVu2eg0ox4+Cz4PjIlrJH/APpQxNzH/wCWQk5fMNaD/uCkGuiq3Pyu3AseYcL/AKaKiT4pHS0bYWuzucS+R3N8jt/wA6ADolez3NF29XLJlDtAwnS41BA5dPHVFrQmrfsKx9mSzHe+wuYb720c3XmO+VBCMbo/EcVfU3kf1Ibp9nlrz5qJluAseVfpo5PQqU2XJgEkLkobN9c7oELVtzNLSAQQQQdiCLEI7RBV0zm3IC9g8xGMe2CvtFHTn3u0uR4MB/EtWbUpA81aPazX9pW5N8jdT/M83/8Ay1nxVSicqJiSFSuu5Jl3Xlje+6nsE4LrqwgxwOaw69pJ3I7dbnU+gKEpJdhim+ivkp2lhfK4Mja57zoGtBc4+QGq2PA/ZBTx2dVSumdzazuR/H3j8Qr1RUdNSNywxRxC1u60AnzO59VF514LR+O32Zp7P/Zk8OE9ewNaNWwkglx5GS2gH8vx6LTX4hFC0MjaxgGzWAADyAUTiWIyy6Mu1vVVfGphC0vllygfE+ASbe2aYwjFFkxbiERtJvqs44l4lfICGnfQBQ8/FRkOUDS+hOtvNRkNQX3kOXTqSPhohwfkMs0eosVRzhjS18Vy4gmTM/tNzdrbGwabjS3JSAxSFrA1rMjW9SLAdNOarmI4mXaN+I2Q7MzgGuNxv5qnGzP9iXRc6PEGysyl2Vj/AH7G3d+4Lam91F4lFRwODoS0PBDm96QkEG48NCExhk/Z62aOQLs9/QM5eqcbQzVDu60EHoCB8ykrf9BcuS62IqMcklfneQTbp156q0YZ2EkLcr7Hd4fvmHW2w10I/NLwX2cSPsSMoPwCnm+z98Ls0cmttQRYHwuu+xLwNwm+2Vf/AAUPdnjk2N7OsQPK5GiNiow3R0peeYGjP1RcsLmuLXgtcORQNS/IQs0/k3qMaZWOJrbZJSO08ggJpCRYC5XPqbhS3B1H2k/eGgHzUIxcpbHk0lohIsw0cCPNeK7cb4cGtDmjbdcjljxlQMcuUbNMbF4/BKfT3FiU60WXXXrHmmN457GJ6irlm/i42skdmF43l45BuXNbQAa39EMz2I9mR2tdmHRkOVxH9TnkD4FbY+QAXPJVqtxIEk/u3JTyzcVrsthx85bIPBuBcPpSHNhzvAtmkJefge78lPTVwaLCwHIDZQtXivigRUOeb8gsm32blGKJmoxS34Ie9xmefRCRFrRncfG6rnEfFLY2kk2HIfvmqRiLKSRKcQ8QRwMJJGgWN47jT6mTM4m32R0/VM4xjL6l+Y3y8h+aABWmMaMWTK5aXQTTNJd+7AdSh6mqv3GnuD/7eJRBHcPU2Hp+z8lzadp0sR4+C59ipaGaaIHXz+N7XRUrMou3c/IfmvA1oOm+m3zSrFxQsND+Gt1u5xPmT/Za5wOYQ0F1j6DdZfRULiRorzw/ROFhrupZLLYtGsxyi3dtbwTE7roLDY3MYA7dP1tUyJhe8+QGpJ6AKDtmmKSIfiLB+2bcf6jfdPX+UrI+JZHh4YAb3tbmCN1fKvi6oz2bTgMOxJ73wQWJ4Z21ewuZbMxrgfvHZy76/wBchJy1RV6LNYBwN1duFbtubFEYnw+2NzX20CnezaIbsHJLjg3ME5JRIjG6gvYbrlCY/X9k05tFybJHk7QsXxVM2eOoBGn9vA9Eh0qjHnIc4/3WTv8AGN3uLWvfkvS4mCwHiTFMoEY3dqf6Rv8AHQKm1Ne55s1DYjihnmfJfuk5W/0t/PdMnEGxjTdZMruR6OGPGIfHEBq8+icfVtDST3WjUqCfiFwXONmj5+AVW4h4mFrcvstH1KWMLGnkSJbiXikAdB9lo3KzivrXzOzPPkOQSJ6p0jszjr8h5LwBaVGjDObkNsGg9Uti5w1P73XNcmECC8Egcv1/skGQk77Cy7lfwskxJGOgunYpzDMNzW0UXQx3K0HAKQED9/vdK2Uih3DMJvuB4jzVpwmmDXNSKWmsNv3ujqcaqcmisY0SzSonHmPcO60u8rX9LqRZMAliYKaZejPWTyS1EcX8M9gadXOLfwJutHZSsygEA22vyPUHkhXhpIsAvZ6ns25iCWjewJ08gu5B4AfFNJKYiWEPAFyNnW8ORQkFfGymu5w0HVReMYtLK7u9yOxyjmerj+A/sstxqGqeXDMezubC9lWHezJmjWkK424iFQ4tadAVyrP8KQdVyskl0Z22+z6lnrQh619qdx5WfoBc7FRTpiXWba/mPkEzU4wxtomvzOBt7wAzk6gHmb/RauNEWyjmdzBY6fJCS1wHeedOnMqz8Z8Ytp7RFkcsgAzNIabX2v0WZYristRe7GMaeUbAB6kalZXhSfZqXyG10OYzjrn+5y26Dy6lVqR7ibm5KNMJ8fgV4GjomUUiUpt9gQcno79Ut0AKSKRx2RoFjpZzS4orlNDunKnmvIvoboBHJrWNtm6ep3SIWrzt2hhbY+eiHFQB187fqlaCmWrB42g6rQMGljFyb5WjMR18FlWFVWYq64XXZB4/IjoVKa0acMlyV9F2fX1ELsxDOydlDWtbr3v5r62Cl4CHxtka5rg4X0N1A0mKwzBrCbEA2adHNJFtPvDxClm0McIBDi0BpuCQG9bkX3WfRvlG9nr3lNvlcOqSKoHUbL0zBAWx2mkPNSLZLC5UWyQLpKu4suA2V7iTEnSMcYIrtYCXONhe24YDvzVCdxO14sba+C1PEsONTG6MnI0tLb9Li17LA8conU8r4X6PY7K623UEeBBB9VbEoy/0y/IbVei108VM7vFwvvuuVEbOQuVPrfsh9i9FwxDHp5GlznkE6d3T6KAZStfrm73jv8VYKKmHYukcLtBDSPA7n0uCg67B7d6M6bj9FWDtWyU6TpERPSOBve5PMk3PxSYqp7DzCMGa2V425pLogU7QqCqXE77gHzATr5mHUsCijT2NwlvfoCV3FHWw11UwahjULU4sdmgD0QcjrodzSgwhUTvtHc8+gUjRTNaR+/qoxqWFyOZan09PUNsRkf8AeGx8x+/VVjEKB0Ti0+h5FP01SQVIVbhIzxCPEHL2V1jiw5m/3VmwrEhJbkVXZGpunnMbw4fsKckPF0afRRtfZr/RWCkwFj+bj5ucR9VXMJlEkYcN7BXfBKgZQFkc6Z6UI2huopzELDZRsuJ23VvfGHDVVzFsObrolQzI12Ogc1zeIWhBS4U4jQC/iqbxG6aKTsyQLgEEdCSNPgqRhZGeRxVl7reOY2NteyyjiLEDUTyTH7ZHwa0NHyC9rIS2xJuT1QU+yvCHEyZMrmDWXJYC9VCZossTQ2SEbNcQfPKL/PRVyGocy7N7IimxLLI5ztnkuPmST+KExKdjn3Zz3QgqSOm7bEVFWXaJIGm6bLUp7fFWRJnhkaEJUTX8l0rfFNdmTsCfIE3StjJCXOSC5KLD4DzISS3xHzP0CVjD8Dri/Q2+O30PwTwXYXAO+8vGRoAe37Tg6/uA8xa+vOyXUwhjrA5mHWN1rZmX0NuR6jkQUEzmJCNiks3dAFyallTJ0Bqz2pkFyh3PCaJuvWRnolYxeODMUYyMmR4aASLk28fVWal4zpGE2ebf0Ot9FmVPBq2+2g8fNOmGz8h0PK+xUHgi3bNEfkSikkbBSe0CicNZcuhNnNcCLcvNPwcVUUwu2dg8HnI7/i6x5LGDD15b+Z+q6al573+K76I+w/8AVP0bdJUxEXa9jvJwP0KzTj+oa6aEDcB1/IkW+hVXMHMD4fokm5IJJ063/FPDHxd2JkzOSqiQ4hgytYb7hQnJTWNtu1huoYiwVZdkEIauXjV6gcS0guCh0TfdDuRXRzJethpxBC+OVzp3f6rCAGMGuxsDvYak3uTooqSQ+H1S22tt1/BNSu8E3gQZe89T9E5h9dJC/tIzZ1nC510cLH5JspBQaGQh9ySTudT5ndIIThTbigEQn45Ta19L3tyv1Q90tpQCPdolwQBx77sosdhcppqKpWFxAHr4LjiY4gw6lvTyUpcGvgjdIDylF2vscxN7tNxsOV7oJlLmcBbRGNjAsALAJ2A3N1zdnJCZaa23VLqKXtG22cNiiHOXNKUYimQF92u0cNL800ycxuySajr+SlqmLN3huPmhqqESs8QusFDDoratOh2tsvHAHdCUlSWHK65COlZzBuOR/ApgAkkVtN2/RBVEFhcaj6ealPNNvZ934LjiFC9Rc1Jzb8PyXLgBQTD16uRXRz7CI/cCaeuXKhMYcmnrxckY4kpp65cgwni9C5cgEcapXCBo5cuXHEhUe6up1y5AISEpcuQCet5Id/8AqLlyBxC4r75ReGHukLlybwKelIeuXJjhEvvLly5A4//Z" alt="Первый барбер BLADE">
+            <span class="barber-tag">MASTER BARBER</span>
+          </div>
+          <div class="barber-info">
+            <h3>Имя барбера</h3>
+            <p>Классические мужские стрижки</p>
+          </div>
+        </article>
+
+        <article class="barber-card">
+          <div class="barber-photo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0YRHqNFT36HLvhkFEsVfQm8PiLdaFROShbxjYUnmVkw&s=10" alt="Второй барбер BLADE">
+            <span class="barber-tag">MASTER BARBER</span>
+          </div>
+          <div class="barber-info">
+            <h3>Имя барбера</h3>
+            <p>Современные стрижки и фейды</p>
+          </div>
+        </article>
+
+        <article class="barber-card">
+          <div class="barber-photo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqOD-OmEvsDsP45-1K74rDXvPK1NYCL7-qtzylLqS9Zw&s=10" alt="Третий барбер BLADE">
+            <span class="barber-tag">MASTER BARBER</span>
+          </div>
+          <div class="barber-info">
+            <h3>Имя барбера</h3>
+            <p>Борода и классическое бритьё</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ГАЛЕРЕЯ -->
+    <section class="section container" id="gallery">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">04 / НАШИ РАБОТЫ</span>
+          <h2>СТИЛЬ ГОВОРИТ <span class="gold-text">ЗА ТЕБЯ.</span></h2>
+        </div>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item gallery-tall">
+          <img src="images/cut-1.jpg" alt="Пример мужской стрижки номер один">
+          <span>CLASSIC CUT</span>
+        </div>
+        <div class="gallery-item">
+          <img src="images/cut-2.jpg" alt="Пример современной мужской стрижки">
+          <span>MODERN FADE</span>
+        </div>
+        <div class="gallery-item">
+          <img src="images/cut-3.jpg" alt="Пример оформления мужской бороды">
+          <span>BEARD DESIGN</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ЗАПИСЬ -->
+    <section class="section container" id="booking">
+      <div class="booking-box">
+        <div class="booking-copy">
+          <span class="eyebrow">05 / ЗАПИСЬ</span>
+          <h2>ТВОЁ ВРЕМЯ<br><span class="gold-text">ВЫГЛЯДЕТЬ ОТЛИЧНО.</span></h2>
+          <p>Выбери услугу и оставь свои контакты, чтобы подготовить заявку.</p>
+          <div class="booking-note">✳ BLADE BARBERSHOP — ТВОЙ СТИЛЬ НАЧИНАЕТСЯ ЗДЕСЬ</div>
+        </div>
+
+        <form class="booking-form" id="bookingForm">
+          <label for="clientName">Твоё имя</label>
+          <input id="clientName" name="name" type="text"
+            placeholder="Как к тебе обращаться?" required>
+
+          <label for="clientPhone">Номер телефона</label>
+          <input id="clientPhone" name="phone" type="tel"
+            placeholder="+7 (___) ___-__-__" required>
+
+          <label for="service">Выбери услугу</label>
+          <select id="service" name="service" required>
+            <option value="">Выбери услугу</option>
+            <option>Мужская стрижка</option>
+            <option>Стрижка + борода</option>
+            <option>Оформление бороды</option>
+            <option>Королевское бритьё</option>
+            <option>Стрижка машинкой</option>
+            <option>Детская стрижка</option>
+          </select>
+
+          <label for="bookingDate">Желаемая дата</label>
+          <input id="bookingDate" name="date" type="date">
+
+          <button class="button button-gold form-button" type="submit">
+            Подготовить заявку ↗
+          </button>
+
+          <p class="form-message" id="formMessage" aria-live="polite"></p>
+          <small class="form-disclaimer">
+            Демоверсия формы: для реальной отправки нужно подключить
+            WhatsApp, почту или сервер.
+          </small>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a class="logo" href="#home">BLADE<span>.</span><small>BARBERSHOP</small></a>
+      <p>Мужской стиль. Без лишних слов.</p>
+      <a href="#home" class="back-top">НАВЕРХ ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1203 @@
+
+:root {
+  --bg: #0b0b0a;
+  --panel: #141412;
+  --gold: #d4ad6b;
+  --gold-light: #f3d9a4;
+  --white: #f6f3ed;
+  --muted: #a6a198;
+  --border: rgba(212, 173, 107, 0.23);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background: var(--bg);
+  color: var(--white);
+  overflow-x: hidden;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+button, input, select {
+  font: inherit;
+}
+
+.container {
+  width: min(1160px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.section {
+  padding-top: 110px;
+}
+
+/* ЖИВОЙ ФОН */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -2;
+  background-image: linear-gradient(
+    rgba(255,255,255,.012) 1px,
+    transparent 1px
+  ), linear-gradient(
+    90deg, rgba(255,255,255,.012) 1px,
+    transparent 1px
+  );
+  background-size: 55px 55px;
+}
+
+.light {
+  position: fixed;
+  z-index: -1;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+  opacity: .12;
+  animation: lightMove 14s ease-in-out infinite alternate;
+}
+
+.light-one {
+  background: #c58d3b;
+  top: -200px;
+  left: -140px;
+}
+
+.light-two {
+  background: #80633d;
+  right: -200px;
+  top: 40%;
+  animation-delay: -7s;
+}
+
+@keyframes lightMove {
+  from { transform: translate(0, 0) scale(1); }
+  to { transform: translate(100px, 120px) scale(1.3); }
+}
+
+.gold-text {
+  color: var(--gold);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--gold);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2.4px;
+  margin-bottom: 20px;
+}
+
+.gold-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 12px var(--gold);
+  animation: blink 2s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: .35; }
+}
+
+/* ШАПКА */
+
+.header {
+  width: min(1280px, calc(100% - 48px));
+  min-height: 95px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  border-bottom: 1px solid rgba(255,255,255,.09);
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  font-family: "Oswald", sans-serif;
+  font-size: 31px;
+  line-height: 1.05;
+  letter-spacing: 2px;
+}
+
+.logo > span {
+  color: var(--gold);
+}
+
+.logo small {
+  display: block;
+  font-family: "Manrope", sans-serif;
+  font-size: 9px;
+  letter-spacing: 4px;
+  margin-top: 5px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 29px;
+}
+
+.nav > a {
+  font-size: 12px;
+  color: #c4c0b8;
+  transition: color .25s;
+}
+
+.nav > a:hover {
+  color: var(--gold-light);
+}
+
+.nav .nav-book {
+  padding: 12px 19px;
+  border: 1px solid var(--border);
+  color: var(--gold-light);
+  transition: background .3s, transform .3s;
+}
+
+.nav .nav-book:hover {
+  background: rgba(212,173,107,.12);
+  transform: translateY(-2px);
+}
+
+.menu-toggle {
+  display: none;
+}
+
+/* ГЛАВНЫЙ ЭКРАН */
+
+.hero {
+  min-height: 680px;
+  display: grid;
+  grid-template-columns: 1fr .9fr;
+  gap: 60px;
+  align-items: center;
+  padding-top: 65px;
+  padding-bottom: 75px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+h1, h2, h3 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: clamp(48px, 6vw, 79px);
+  line-height: 1.12;
+  letter-spacing: -1px;
+}
+
+.hero-description {
+  max-width: 460px;
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: 25px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+  margin-top: 30px;
+}
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 22px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 800;
+  transition: transform .3s, box-shadow .3s,
+    background .3s, border-color .3s;
+}
+
+.button:hover {
+  transform: translateY(-4px);
+}
+
+.button-gold {
+  color: #17130c;
+  background: linear-gradient(115deg, #b98a49, #f0d39c, #c49a59);
+  background-size: 200% 200%;
+  animation: goldShimmer 6s ease infinite;
+  box-shadow: 0 8px 28px rgba(184,139,72,.12);
+}
+
+.button-gold:hover {
+  box-shadow: 0 12px 35px rgba(212,173,107,.3);
+}
+
+@keyframes goldShimmer {
+  50% { background-position: 100% 50%; }
+}
+
+.button-outline {
+  color: var(--white);
+  border-color: var(--border);
+  background: rgba(255,255,255,.025);
+}
+
+.button-outline:hover {
+  border-color: var(--gold);
+  background: rgba(212,173,107,.07);
+}
+
+.hero-stats {
+  display: flex;
+  gap: 32px;
+  margin-top: 55px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,.1);
+}
+
+.hero-stats div {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-stats strong {
+  font-family: "Oswald", sans-serif;
+  color: var(--gold-light);
+  font-size: 27px;
+}
+
+.hero-stats span {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+/* ГЛАВНАЯ ФОТОГРАФИЯ */
+
+.hero-visual {
+  min-width: 0;
+  position: relative;
+  padding: 0 10px 20px 0;
+}
+
+.hero-frame {
+  height: 490px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #211b13;
+}
+
+.hero-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg, transparent 60%, rgba(0,0,0,.65)
+  );
+}
+
+.hero-frame img {
+  transition: transform .8s;
+  animation: photoReveal 1.2s ease both;
+}
+
+.hero-frame:hover img {
+  transform: scale(1.045);
+}
+
+@keyframes photoReveal {
+  from { opacity: 0; transform: scale(1.07); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.frame-label {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 9px;
+  letter-spacing: 1.6px;
+}
+
+.hero-badge {
+  position: absolute;
+  bottom: 0;
+  left: -35px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 16px 21px;
+  border: 1px solid var(--border);
+  background: #171611;
+  animation: badgeFloat 5s ease-in-out infinite;
+}
+
+@keyframes badgeFloat {
+  50% { transform: translateY(-7px); }
+}
+
+.badge-star {
+  color: var(--gold);
+  font-size: 29px;
+}
+
+.hero-badge strong,
+.hero-badge small {
+  display: block;
+}
+
+.hero-badge strong {
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.hero-badge small {
+  color: var(--muted);
+  font-size: 9px;
+}
+
+/* БЕГУЩАЯ СТРОКА */
+
+.ticker {
+  overflow: hidden;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: rgba(212,173,107,.035);
+}
+
+.ticker-track {
+  display: flex;
+  width: max-content;
+  gap: 35px;
+  padding: 19px 0;
+  animation: tickerMove 30s linear infinite;
+}
+
+.ticker-track span {
+  color: var(--gold-light);
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+.ticker:hover .ticker-track {
+  animation-play-state: paused;
+}
+
+@keyframes tickerMove {
+  to { transform: translateX(-50%); }
+}
+
+/* ЗАГОЛОВКИ СЕКЦИЙ */
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 25px;
+  margin-bottom: 38px;
+}
+
+.section-heading .eyebrow {
+  margin-bottom: 12px;
+}
+
+h2 {
+  font-size: clamp(34px, 4vw, 49px);
+  line-height: 1.18;
+  letter-spacing: -.5px;
+}
+
+.section-heading > p {
+  max-width: 300px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* УСЛУГИ */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.service-card {
+  position: relative;
+  overflow: hidden;
+  min-width: 0;
+  padding: 26px;
+  border: 1px solid rgba(255,255,255,.09);
+  background: linear-gradient(145deg, #181714, #10100e);
+  transition: transform .35s, border-color .35s,
+    box-shadow .35s;
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: -100px;
+  right: -90px;
+  background: var(--gold);
+  opacity: 0;
+  filter: blur(65px);
+  transition: opacity .4s;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--border);
+  box-shadow: 0 18px 45px rgba(0,0,0,.25);
+}
+
+.service-card:hover::before {
+  opacity: .22;
+}
+
+.service-number {
+  position: absolute;
+  top: 20px;
+  right: 22px;
+  color: #777166;
+  font-size: 10px;
+}
+
+.service-icon {
+  display: grid;
+  place-items: center;
+  width: 49px;
+  height: 49px;
+  border: 1px solid var(--border);
+  color: var(--gold);
+  font-size: 24px;
+  margin-bottom: 24px;
+  transition: transform .35s, background .35s;
+}
+
+.service-card:hover .service-icon {
+  transform: rotate(-8deg) scale(1.08);
+  background: rgba(212,173,107,.09);
+}
+
+.service-card h3 {
+  font-size: 22px;
+}
+
+.service-card p {
+  min-height: 65px;
+  color: var(--muted);
+  font-size: 11px;
+  margin-top: 10px;
+}
+
+.service-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 24px;
+  padding-top: 17px;
+  border-top: 1px solid rgba(255,255,255,.09);
+}
+
+.service-bottom strong {
+  color: var(--gold-light);
+  font-size: 15px;
+}
+
+.service-link {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--border);
+  color: var(--gold);
+  transition: background .3s, transform .3s;
+}
+
+.service-link:hover {
+  background: var(--gold);
+  color: #111;
+  transform: rotate(45deg);
+}
+
+.price-note {
+  color: #827d73;
+  font-size: 10px;
+  margin-top: 18px;
+}
+
+/* О НАС */
+
+.about-section {
+  margin-top: 110px;
+  padding-bottom: 90px;
+  background: #11110f;
+  border-top: 1px solid rgba(255,255,255,.05);
+  border-bottom: 1px solid rgba(255,255,255,.05);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 65px;
+  align-items: center;
+}
+
+.about-image {
+  height: 490px;
+  position: relative;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.about-image img {
+  transition: transform .7s;
+}
+
+.about-image:hover img {
+  transform: scale(1.04);
+}
+
+.image-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px 20px;
+  color: var(--gold-light);
+  background: rgba(0,0,0,.7);
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.about-content h2 {
+  margin-bottom: 23px;
+}
+
+.about-content p {
+  color: #aaa69e;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+.text-link {
+  display: inline-block;
+  color: var(--gold);
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-weight: 800;
+  margin-top: 15px;
+  transition: letter-spacing .3s;
+}
+
+.text-link:hover {
+  letter-spacing: 1.8px;
+}
+
+/* БАРБЕРЫ */
+
+.barbers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.barber-card {
+  min-width: 0;
+  border: 1px solid rgba(255,255,255,.08);
+  background: var(--panel);
+  transition: transform .35s, border-color .35s;
+}
+
+.barber-card:hover {
+  transform: translateY(-7px);
+  border-color: var(--border);
+}
+
+.barber-photo {
+  height: 330px;
+  position: relative;
+  overflow: hidden;
+  background: #242019;
+}
+
+.barber-photo img {
+  transition: transform .6s;
+}
+
+.barber-card:hover .barber-photo img {
+  transform: scale(1.06);
+}
+
+.barber-tag {
+  position: absolute;
+  bottom: 13px;
+  left: 13px;
+  padding: 7px 10px;
+  color: var(--gold-light);
+  background: rgba(10,10,9,.85);
+  border: 1px solid var(--border);
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+
+.barber-info {
+  padding: 19px;
+}
+
+.barber-info h3 {
+  font-size: 21px;
+}
+
+.barber-info p {
+  color: var(--muted);
+  font-size: 11px;
+  margin-top: 5px;
+}
+
+/* ГАЛЕРЕЯ */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  grid-template-rows: repeat(2, 220px);
+  gap: 16px;
+}
+
+.gallery-item {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #211c14;
+}
+
+.gallery-tall {
+  grid-row: span 2;
+}
+
+.gallery-item img {
+  transition: transform .7s, opacity .4s;
+  opacity: .85;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.06);
+  opacity: 1;
+}
+
+.gallery-item span {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  padding: 7px 11px;
+  color: var(--gold-light);
+  background: rgba(0,0,0,.75);
+  font-size: 9px;
+  letter-spacing: 1.5px;
+}
+
+/* ЗАПИСЬ */
+
+.booking-box {
+  display: grid;
+  grid-template-columns: 1fr .8fr;
+  gap: 55px;
+  padding: 48px;
+  border: 1px solid var(--border);
+  background: linear-gradient(130deg, #1a1813, #10100e 65%);
+}
+
+.booking-copy {
+  align-self: center;
+}
+
+.booking-copy h2 {
+  font-size: clamp(34px, 4vw, 50px);
+}
+
+.booking-copy > p {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 20px;
+  max-width: 390px;
+}
+
+.booking-note {
+  color: var(--gold);
+  font-size: 9px;
+  letter-spacing: 1.3px;
+  margin-top: 38px;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.booking-form label {
+  color: #d4cec2;
+  font-size: 11px;
+  margin-top: 5px;
+}
+
+.booking-form input,
+.booking-form select {
+  width: 100%;
+  min-height: 47px;
+  padding: 12px 13px;
+  color: var(--white);
+  background: #0e0e0c;
+  border: 1px solid rgba(255,255,255,.13);
+  border-radius: 0;
+  outline: none;
+  font-size: 12px;
+  transition: border-color .25s;
+}
+
+.booking-form input:focus,
+.booking-form select:focus {
+  border-color: var(--gold);
+}
+
+.booking-form select option {
+  background: #141412;
+}
+
+.booking-form input[type="date"] {
+  color-scheme: dark;
+}
+
+.form-button {
+  width: 100%;
+  margin-top: 13px;
+}
+
+.form-message {
+  color: var(--gold-light);
+  font-size: 12px;
+}
+
+.form-disclaimer {
+  color: #888277;
+  font-size: 10px;
+}
+
+/* ПОДВАЛ */
+
+.footer {
+  margin-top: 100px;
+  border-top: 1px solid rgba(255,255,255,.09);
+}
+
+.footer-inner {
+  min-height: 115px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-inner > p,
+.back-top {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.back-top {
+  transition: color .25s;
+}
+
+.back-top:hover {
+  color: var(--gold);
+}
+
+/* ПОЯВЛЕНИЕ ПРИ ПРОКРУТКЕ */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ПЛАНШЕТЫ */
+
+@media (max-width: 950px) {
+  .nav {
+    gap: 16px;
+  }
+
+  .nav > a {
+    font-size: 11px;
+  }
+
+  .hero {
+    gap: 30px;
+  }
+
+  .hero-frame {
+    height: 410px;
+  }
+
+  .hero-stats {
+    gap: 20px;
+  }
+
+  .about-grid {
+    gap: 35px;
+  }
+
+  .service-card {
+    padding: 21px;
+  }
+
+  .barber-photo {
+    height: 270px;
+  }
+
+  .booking-box {
+    gap: 30px;
+    padding: 32px;
+  }
+}
+
+/* МОБИЛЬНОЕ МЕНЮ И ТЕЛЕФОНЫ */
+
+@media (max-width: 700px) {
+  .container {
+    width: calc(100% - 32px);
+  }
+
+  .header {
+    width: calc(100% - 32px);
+    min-height: 78px;
+  }
+
+  .logo {
+    font-size: 26px;
+  }
+
+  .menu-toggle {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background: transparent;
+    border: 1px solid var(--border);
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    width: 19px;
+    height: 2px;
+    background: var(--gold-light);
+    transition: transform .3s, opacity .3s;
+  }
+
+  .menu-toggle.active span:first-child {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active span:last-child {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .nav {
+    position: absolute;
+    top: 85px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 3px;
+    padding: 12px;
+    background: rgba(15,15,13,.98);
+    border: 1px solid var(--border);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: .25s;
+  }
+
+  .nav.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .nav > a {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  .nav .nav-book {
+    text-align: center;
+    margin-top: 5px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 38px;
+    padding-top: 65px;
+    padding-bottom: 50px;
+    min-height: auto;
+  }
+
+  h1 {
+    font-size: clamp(42px, 10.5vw, 64px);
+  }
+
+  .hero-description {
+    font-size: 13px;
+  }
+
+  .hero-buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .button {
+    width: 100%;
+    min-height: 48px;
+  }
+
+  .hero-stats {
+    gap: 15px;
+    justify-content: space-between;
+    margin-top: 35px;
+  }
+
+  .hero-stats strong {
+    font-size: 23px;
+  }
+
+  .hero-stats span {
+    font-size: 9px;
+  }
+
+  .hero-visual {
+    margin-left: 12px;
+    margin-right: 4px;
+  }
+
+  .hero-frame {
+    height: min(105vw, 430px);
+  }
+
+  .hero-badge {
+    left: -12px;
+    padding: 12px 14px;
+  }
+
+  .section {
+    padding-top: 75px;
+  }
+
+  .section-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 26px;
+  }
+
+  h2 {
+    font-size: clamp(32px, 8vw, 43px);
+  }
+
+  .section-heading > p {
+    max-width: 100%;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .service-card {
+    padding: 23px;
+  }
+
+  .service-card p {
+    min-height: auto;
+  }
+
+  .about-section {
+    margin-top: 75px;
+    padding-bottom: 55px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .about-image {
+    height: min(100vw, 420px);
+  }
+
+  .about-content h2 {
+    font-size: 42px;
+  }
+
+  .barbers-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .barber-photo {
+    height: 360px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 270px 180px;
+    gap: 10px;
+  }
+
+  .gallery-tall {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+
+  .gallery-item span {
+    left: 8px;
+    bottom: 8px;
+    font-size: 8px;
+    padding: 6px;
+  }
+
+  .booking-box {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 25px 18px;
+  }
+
+  .booking-copy h2 {
+    font-size: 37px;
+  }
+
+  .booking-note {
+    line-height: 1.8;
+  }
+
+  .footer {
+    margin-top: 65px;
+  }
+
+  .footer-inner {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    flex-wrap: wrap;
+  }
+
+  .footer-inner > p {
+    order: 3;
+    width: 100%;
+  }
+}
+
+/* УЗКИЕ ТЕЛЕФОНЫ */
+
+@media (max-width: 380px) {
+  .container {
+    width: calc(100% - 24px);
+  }
+
+  h1 {
+    font-size: 39px;
+  }
+
+  .hero-stats {
+    gap: 8px;
+  }
+
+  .hero-stats strong {
+    font-size: 20px;
+  }
+
+  .hero-stats span {
+    font-size: 8px;
+  }
+
+  .gallery-grid {
+    grid-template-rows: 220px 150px;
+  }
+
+  .barber-photo {
+    height: 300px;
+  }
+}
+
+/* ДОСТУПНОСТЬ */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
